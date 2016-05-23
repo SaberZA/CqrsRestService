@@ -2,6 +2,6 @@
 {
     public class GetQueryResult
     {
-        public double Msg { get; internal set; }
+        public string Msg { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace CqrsRestService.Test
         {
         }
 
-        public override string GetApiResource()
+        public override string GetResource()
         {
             return @"hello";
         }

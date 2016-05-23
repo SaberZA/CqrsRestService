@@ -2,6 +2,6 @@
 {
     public interface IRestApiQuery
     {
-        string GetApiResource();
+        string GetResource();
     }
 }

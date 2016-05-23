@@ -31,6 +31,7 @@ namespace CqrsRestService.CorePortable
         {
             var restRequest = new RestApiRequestAdapter<T>(restApiQuery);
             var restResponse = await _restClient.ExecuteTaskAsync<T>(restRequest);
+            restApiQuery.RestResponse = restResponse;
             restApiQuery.Result = restResponse.Data;
         }
     }

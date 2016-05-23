@@ -1,6 +1,7 @@
 ﻿using CqrsRestService.Core;
 using CqrsRestService.CorePortable;
 using NUnit.Framework;
+using RestSharp;
 using System;
 using System.Threading.Tasks;
 
@@ -49,8 +50,7 @@ namespace CqrsRestService.Test
         [Test]
         public async Task Hello_GetResultWithIdParameter_ShouldReturn45()
         {
-            var getHelloQuery = new GetHello_Id_Query();
-            getHelloQuery.Id = "3";
+            var getHelloQuery = new GetHelloIdQuery(3);
 
             await _restService.ExecuteQuery(getHelloQuery);
 

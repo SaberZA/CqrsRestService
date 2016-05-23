@@ -9,34 +9,20 @@ namespace CqrsRestService.Core
     {
         public RestApiQuery()
         {
-            HttpMethod = GetHttpMethod(SplitCamelCase(GetType().Name).Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0]);
-        }
+            HttpMethod = SplitCamelCase(GetType().Name).Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries)[0];
+        }        
 
-        public Method HttpMethod { get; protected set; }
+        public string HttpMethod { get; protected set; }
 
-        public object Body { get; protected set; }
+        public object RequestBody { get; protected set; }
 
-        public abstract string GetApiResource();
+        public abstract string GetResource();
 
-        #region Helpers
-        private Method GetHttpMethod(string httpVerb)
-        {
-            Method restMethod;
-            switch (httpVerb.ToLower())
-            {
-                case "get": restMethod = Method.GET; break;
-                case "post": restMethod = Method.POST; break;
-                case "put": restMethod = Method.PUT; break;
-                case "delete": restMethod = Method.DELETE; break;
-                case "head": restMethod = Method.HEAD; break;
-                case "options": restMethod = Method.OPTIONS; break;
-                case "patch": restMethod = Method.PATCH; break;
-                case "merge": restMethod = Method.MERGE; break;
-                default: restMethod = Method.GET; break;
-            }
+        public T Result { get; set; }
 
-            return restMethod;
-        }
+        public IRestResponse<T> RestResponse { get; set; }
+
+        #region Helpers        
 
         private string SplitCamelCase(string str)
         {
@@ -52,6 +38,5 @@ namespace CqrsRestService.Core
         }
 
         #endregion
-
     }
 }
