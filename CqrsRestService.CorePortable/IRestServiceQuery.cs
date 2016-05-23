@@ -1,7 +1,13 @@
 ﻿namespace CqrsRestService.CorePortable
 {
-    public interface IRestServiceQuery<T>
+    public abstract class RestServiceQuery<T> : IRestServiceQuery
     {
-        T Result { get; set; }
+        public object Body { get; set; }
+        public T Result { get; set; }
+    }
+
+    public interface IRestServiceQuery
+    {
+        //object Body { get; set; }
     }
 }

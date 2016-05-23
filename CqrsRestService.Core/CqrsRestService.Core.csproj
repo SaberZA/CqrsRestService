@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="GetHelloQuery.cs" />
     <Compile Include="GetHelloQueryResult.cs" />
+    <Compile Include="RestApiQuery.cs" />
+    <Compile Include="RestApiRequestAdapter.cs" />
     <Compile Include="RestRequestAdapter.cs" />
     <Compile Include="RestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

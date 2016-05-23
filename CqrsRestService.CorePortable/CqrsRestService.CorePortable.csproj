@@ -37,6 +37,8 @@
     <!-- A reference to the entire .NET Framework is automatically included -->
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IQueryResult.cs" />
+    <Compile Include="IRestApiQuery.cs" />
     <Compile Include="IRestService.cs" />
     <Compile Include="IRestServiceQuery.cs" />
     <Compile Include="IServiceHost.cs" />

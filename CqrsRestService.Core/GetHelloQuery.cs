@@ -3,13 +3,11 @@ using System;
 
 namespace CqrsRestService.Core
 {
-    public class GetHelloQuery : IRestServiceQuery<GetHelloQueryResult>
+    public class GetHelloQuery : RestServiceQuery<GetHelloQueryResult>
     {
         //[HttpVerb][Resource]["Query"]
         public GetHelloQuery()
         {
         }
-
-        public GetHelloQueryResult Result { get; set; }
     }
 }

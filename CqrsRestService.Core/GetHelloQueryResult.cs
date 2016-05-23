@@ -1,4 +1,6 @@
-﻿namespace CqrsRestService.Core
+﻿using CqrsRestService.CorePortable;
+
+namespace CqrsRestService.Core
 {
     public class GetHelloQueryResult
     {

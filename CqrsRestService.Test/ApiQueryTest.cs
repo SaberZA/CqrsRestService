@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CqrsRestService.Test
 {
-    
+
     [TestFixture]
-    public class RestServiceTest
+    public class ApiQueryTest
     {
         private RestService _restService;
 
@@ -25,16 +25,16 @@ namespace CqrsRestService.Test
             Assert.IsNotNull(_restService);
         }
 
-        [Ignore("Need an API that supports root resource")]
-        [Test]
-        public async Task NoResource_GetBaseResultFromDemoService()
-        {
-            var getQuery = new GetQuery();
-            await _restService.ExecuteQuery(getQuery);
+        //[Ignore("Need an API that supports root resource")]
+        //[Test]
+        //public async Task NoResource_GetBaseResultFromDemoService()
+        //{
+        //    var getQuery = new ApiGetQuery();
+        //    await _restService.ExecuteQuery(getQuery);
 
-            Assert.IsNotNull(getQuery.Result);
-            Assert.AreEqual("base method", getQuery.Result.Msg);
-        }
+        //    Assert.IsNotNull(getQuery.Result);
+        //    Assert.AreEqual("base method", getQuery.Result.Msg);
+        //}
 
         [Test]
         public async Task Hello_GetResultFromDemoService()
@@ -57,6 +57,6 @@ namespace CqrsRestService.Test
             Assert.IsNotNull(getHelloQuery.Result);
             Assert.AreEqual("45", getHelloQuery.Result.Msg);
         }
-        
+
     }
 }
