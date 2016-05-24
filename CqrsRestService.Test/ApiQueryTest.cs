@@ -17,7 +17,7 @@ namespace CqrsRestService.Test
         public void Setup()
         {
             var serviceHost = new ServiceHost("http://demo5104102.mockable.io");
-            _restService = new RestService(serviceHost);
+            _restService = new RestService(serviceHost, new ConsoleLoggingService());
         }
 
         [Test]

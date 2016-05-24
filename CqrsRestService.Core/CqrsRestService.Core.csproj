@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleLoggingService.cs" />
     <Compile Include="GetHelloQuery.cs" />
     <Compile Include="GetHelloQueryResult.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="NullLogger.cs" />
     <Compile Include="RestApiQuery.cs" />
     <Compile Include="RestApiRequestAdapter.cs" />
     <Compile Include="RestRequestAdapter.cs" />
